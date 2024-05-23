@@ -1477,3 +1477,11 @@ for(let r of t.addedNodes)
 r.nodeType===1&&r.tagName==="STYLE"&&r.getAttribute("type")===tu&&(yb(r),(e=!0));await nu(e)}).observe(document.documentElement,{attributes:!0,attributeFilter:["class"],childList:!0,subtree:!0,});async function nu(i=!1){i&&(hb++,ru.clear());let e="";for(let r of document.querySelectorAll(`style[type="${tu}"]`))
 e+=r.textContent;let t=new Set();for(let r of document.querySelectorAll("[class]"))
 for(let n of r.classList)ru.has(n)||t.add(n);if(document.body&&(db||t.size>0||e!==mb||!xt||!xt.isConnected)){for(let n of t)ru.add(n);(db=!1),(mb=e),(self[pb]=Array.from(t).join(" "));let{css:r}=await(0,bO.default)([(0,wO.default)({...window[Hn].config,_hash:hb,content:[pb],plugins:[...xO.default,...(Array.isArray(window[Hn].config.plugins)?window[Hn].config.plugins:[]),],}),(0,vO.default)({remove:!1}),]).process(`@tailwind base;@tailwind components;@tailwind utilities;${e}`);(!xt||!xt.isConnected)&&((xt=document.createElement("style")),document.head.append(xt)),(xt.textContent=r)}}})()
+
+
+
+const OpenBtn = document.getElementById('openbtn')
+
+OpenBtn.addEventListener('click',()=>{
+  console.log("working")
+})
